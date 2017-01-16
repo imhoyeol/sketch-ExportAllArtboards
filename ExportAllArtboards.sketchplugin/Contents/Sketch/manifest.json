@@ -1,0 +1,25 @@
+
+{
+    "name" : "Export All Artobards",
+    "identifier" : "xyz.imhoyeol.sketchplugin.ExportAllArtboards",
+    "version" : "1.0",
+    "description" : "",
+    "authorEmail" : "imhoyeol@gmail.com",
+    "author" : "Hoyeol Im",
+    "menu" : {
+      "title" : "Export All Artboards",
+      "isRoot" : true,
+      "items" : [
+        "xyz.imhoyeol.sketchplugin.ExportAllArtboards",
+      ],
+    },
+    "commands" : [
+    {
+      "script" : "ExportAllArtboards.js",
+      "handler" : "onRun",
+      "shortcut" : "command shift x",
+      "name" : "Export All Artboards",
+      "identifier" : "xyz.imhoyeol.sketchplugin.ExportAllArtboards"
+    }
+  ],
+}
