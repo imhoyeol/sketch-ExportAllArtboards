@@ -9,7 +9,7 @@ var onRun = function(context) {
 	//문서의 모든 페이지를 조회합니다.
 	var allPages = [doc pages];
 
-	//각 페이지를 하나씩 조회합니다.
+	//각 페이지를 하나씩 .
 	for (var i = 0; i < allPages.count(); i++) {
 		var page = allPages[i];
 
@@ -19,7 +19,7 @@ var onRun = function(context) {
 		//각 페이지의 모든 아트보드를 조회합니다.
 		var allArtboards = [page artboards];
 
-		//각 아트보드를 하나씩 조회합니다.
+		//각 아트보드를 하나씩 선택합니다.
 		for (var j = 0; j < allArtboards.count(); j++) {
 			var artboard = allArtboards[j]
 			
