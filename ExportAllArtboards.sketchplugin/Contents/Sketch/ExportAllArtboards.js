@@ -9,7 +9,7 @@ var onRun = function(context) {
 	//문서의 모든 페이지를 조회합니다.
 	var allPages = [doc pages];
 
-	//각 페이지를 하나씩 .
+	//각 페이지를 하나씩 선택합니다.
 	for (var i = 0; i < allPages.count(); i++) {
 		var page = allPages[i];
 
