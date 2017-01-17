@@ -29,9 +29,9 @@ var onRun = function(context) {
 			var fileNames = [];
 
 			//아트보드를 복제하고 Export 설정값을 초기화합니다.
-			var c = artboard.duplicate();
-			c.exportOptions().removeAllExportFormats();
-			var exportOption = c.exportOptions().addExportFormat();
+			var duplicated = artboard.duplicate();
+			duplicated.exportOptions().removeAllExportFormats();
+			var exportOption = duplicated.exportOptions().addExportFormat();
 			exportOption.setScale(1);
 			exportOption.setName("@1x");
 
@@ -40,13 +40,13 @@ var onRun = function(context) {
 			fileNames.push(fileName);
 
 			//Export 합니다.
-			var slices = MSExportRequest.exportRequestsFromExportableLayer(c);
+			var slices = MSExportRequest.exportRequestsFromExportableLayer(duplicated);
 			for (var k = 0; k < slices.count(); k++) {
 				[doc saveArtboardOrSlice:slices[k] toFile:fileNames[k]];
 			}
 			
 			//복제했던 아트보드를 삭제하고 레이어 선택을 해제합니다.
-			c.removeFromParent();
+			duplicated.removeFromParent();
 			doc.currentPage().deselectAllLayers();
 		}
 	}
